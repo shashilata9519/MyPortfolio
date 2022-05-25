@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  height: 70px;
+  color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0px 50px;
+  line-height: 80px;
+}
+nav ul li a {
+  color: rgb(8, 6, 6);
+  font-size: 1.4rem;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 3px;
+  background-color: yellow;
+  transition: all 0.5s linear;
+}
+nav a:hover::before {
+  width: 100%;
+  background-color: aqua;
+}
+a.active,
+nav a:hover {
+  color: rgb(255, 11, 153);
+  transition: 0.5s;
+}
+.menu-btn {
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#click {
+  display: none;
+}
+.logo {
+  color: rgb(255, 11, 153);
+  font-size: 2.5rem;
+  font-family: "Metal Mania", cursive;
+  line-height: 80px;
+  margin-left: 80px;
+}
+.logo {
+  text-shadow: 2px 4px 5px rgb(14, 14, 12);
+}
+header {
+  width: 100%;
+  height: 100vh;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  top: 30%;
+  justify-content: space-around;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+  color: rgb(15, 9, 9);
+  z-index: 0;
+}
+div img {
+  width: 580px;
+  height: 500px;
+  margin-top: -100px;
+}
+.text {
+  text-align: left;
+  position: relative;
+  left: 0px;
+  margin: 0px 0px;
+}
+
+.static {
+  font-weight: 400px;
+  font-size: 60px;
+}
+
+.dynamic {
+  color: rgb(255, 11, 153);
+  font-size: 60px;
+  position: relative;
+  top: 0;
+}
+.dynamic span {
+  position: relative;
+}
+.dynamic span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 103%;
+  width: 100%;
+  background-color: white;
+  border-left: 1px solid rgb(255, 11, 153);
+  animation: typing 2s steps(10) infinite;
+}
+.menu-btn {
+  color: black;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  color: rgb(241, 12, 150);
+  text-align: center;
+  border: 1px solid rgb(241, 12, 150);
+  font-size: 20px;
+  padding: 15px 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 50px;
+  font-weight: bold;
+  background-color: white;
+}
+.btn2 {
+  color: white;
+  background-color: rgb(241, 12, 150);
+}
+
+.button a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: rgb(255, 11, 153);
+}
+
+.button a:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button a {
+  text-decoration: none;
+  color: rgb(241, 12, 150);
+}
+.btn2 a {
+  color: white;
+}
+
+.button:hover a {
+  padding-right: 25px;
+  color: white;
+}
+.btn2:hover a {
+  padding-right: 25px;
+  color: rgb(241, 12, 150);
+}
+.button:hover {
+  background-color: rgb(241, 12, 150);
+}
+
+.btn2:hover {
+  background-color: white;
+}
+.button:hover :after {
+  opacity: 1;
+  right: 0;
+}
+
+/* about */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0px;
+  background-color: pink;
+}
+.about img {
+  height: auto;
+  width: 400px;
+  border: 3px solid white;
+  padding: 20px;
+  margin-top: 10px;
+}
+.about-text {
+  width: 650px;
+}
+.main {
+  margin: 0 auto;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text h1 {
+  color: white;
+  font-size: 65px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 80px;
+  font-family: "Metal Mania", cursive;
+  text-shadow: 2px 7px black;
+}
+.about-text p {
+  letter-spacing: 3px;
+  line-height: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+/* skills */
+
+.skills {
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0px;
+}
+
+.skill-text {
+  color: rgb(246, 233, 233);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 4px 2px rgb(241, 12, 150);
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.skills-item {
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+.skills-item h5 {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.progress {
+  background-color: black;
+  height: 10px;
+  border-radius: 7px;
+  width: 90%;
+  position: relative;
+}
+.progress-in {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  border-radius: 1px;
+  animation: css 3s;
+
+  background-color: rgb(241, 12, 150);
+}
+.skill-percent {
+  line-height: 40px;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  font-weight: 400;
+}
+
+.project {
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0px;
+  background-color: pink;
+}
+.project-text h1 {
+  color: white;
+  font-size: 65px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 80px;
+  font-family: "Metal Mania", cursive;
+  text-align: center;
+  text-shadow: 2px 7px black;
+}
+
+.row {
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.card {
+  border: 2px solid rgb(5, 3, 9);
+  background-color: white;
+  margin: 12px;
+  width: 20%;
+  height: 400px;
+  padding: 10px;
+  text-align: center;
+}
+.card-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card p {
+  font-size: 1.5rem;
+}
+.card .btn2{
+  margin-bottom: 10%;
+}
+
+/* contact  */
+
+.contact{
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0px;
+}
+
+.contact-header{
+  color: rgb(246, 233, 233);
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 4px 2px rgb(241, 12, 150);
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(241, 12, 150);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+  background-color: #1dedf5;
+}
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+.column img{
+  margin-top: 10px;
+  height: 80%;
+}
+.row{
+  margin-bottom: 100px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+footer{
+  background-color: rgb(245, 186, 186);
+  width: 100%;
+  height: 15vh;
+ 
+}
+.personal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.mail a{
+  font-size: 3rem;
+  color: black;
+  margin-right: 50px;
+ 
+}
+
+.linkedin a{
+  font-size: 3rem;
+  color: black;
+  margin-right: 50px;
+}
+.github a{
+  font-size: 3rem;
+  color: black;
+  margin-right: 50px;
+}
+.madeby{
+  
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color:rgb(250, 246, 248);
+  text-shadow: 2px 4px 3px black;
+  
+}
+.personal a:hover{
+  color: rgb(241, 12, 150);
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -40px 0 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  label .logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .menu-btn {
+    display: block;
+    color: black;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.714);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    /* z-index: 0; */
+  }
+  nav ul li {
+    display: block;
+    line-height: 30px;
+    margin: 50px 0px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  .content {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .text {
+    font-size: 2rem;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  .dynamic {
+    margin-left: 90%;
+    font-size: 2rem;
+    background-color: white;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .about {
+    width: 611px;
+    position: absolute;
+    top: 176%;
+    padding: 0;
+    height: 150%;
+    text-align: center;
+  }
+
+  .main {
+    display: block;
+    margin-top: 17px;
+  }
+  .about-text {
+    text-align: center;
+    width: auto;
+    margin: 10px 0px;
+  }
+  .about-text h1 {
+    margin-bottom: 33px;
+  }
+  .about-text .button {
+    margin-top: 0px;
+  }
+
+  .skills {
+    position: absolute;
+    top: 318%;
+  }
+  .skill-text {
+    margin-left: 219px;
+  }
+  .progress {
+    width: 176%;
+  }
+  .skills-item h5 {
+    font-size: 1.5rem;
+  }
+  .skills-item{
+    margin-bottom: 60px;
+  }
+  .project {
+    position: absolute;
+    top: 450%;
+    width: 192%;
+    height: auto;
+  }
+  .row {
+    display: block;
+  }
+  .card {
+    width: 146%;
+    margin-left: -56px;
+    margin-bottom: 32px;
+  }
+  
+  .contact {
+    position: absolute;
+    top: 788%;
+  }
+  .contact-header h1{
+    font-size: 3rem;
+    margin-left: 150px;
+  }
+  .column, input[type=submit] {
+    width: 150%;
+    margin-top: 0;
+  }
+  .column img{
+    width: 400px;
+    margin-left: 40px;
+  }
+  .column1{
+    margin-left: 120px;
+  }
+  footer{
+    width: 192%;
+  }
+  .madeby{
+    margin-top: 2px;
+    font-size: 20px;
+    margin-left: -42px;
+  }
+  .mail{
+   font-size: 1rem;
+  }
+
+
+}
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
